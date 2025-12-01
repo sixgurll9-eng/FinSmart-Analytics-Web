@@ -1,0 +1,9 @@
+
+streamlit
+groq
+pandas
+numpy
+matplotlib
+scikit-learn
+openpyxl
+python-dotenv
