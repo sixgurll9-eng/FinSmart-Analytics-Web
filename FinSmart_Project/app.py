@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -15,8 +14,14 @@ st.set_page_config(page_title="FinSmart Analytics Web",
 st.title("FinSmart Analytics Web")
 st.caption("Web dashboard interaktif berbasis AI & Data Science")
 
-# Load API
+# Load API Key
 api_key = os.getenv("GROQ_API_KEY")
+
+if not api_key:
+    st.error("❌ GROQ_API_KEY tidak ditemukan! Tambahkan di Streamlit Secrets.")
+    st.stop()
+
+# Init Groq client
 client = Groq(api_key=api_key)
 
 def generate_ai_commentary(prompt):
