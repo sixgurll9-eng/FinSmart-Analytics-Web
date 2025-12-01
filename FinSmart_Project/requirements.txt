@@ -1,9 +1,8 @@
-
 streamlit
 groq
 pandas
 numpy
-matplotlib
+plotly
 scikit-learn
 openpyxl
 python-dotenv
